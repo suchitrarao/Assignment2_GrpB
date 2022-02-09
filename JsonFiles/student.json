@@ -1,0 +1,18 @@
+{
+"firstname":"Suchitra",
+"lastname":"Rajurao",
+"address" : [
+		{
+		"street":"Neilson",
+		"city":"Toronto",
+		"state":"ON"
+		},
+		
+		{
+		"street":"Kennedy",
+		"city":"Toronto",
+		"state":"ON"
+		}
+	]
+
+}
