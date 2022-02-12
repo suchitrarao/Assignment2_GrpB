@@ -1,0 +1,68 @@
+[
+	{
+		"firstname": "Suchitra",
+		"lastname": "Rajurao",
+		"address": "Lawrence, Toronto, ON",
+		"scoreSubject1": 97.5,
+		"scoreSubject2": 67.5,
+		"scoreSubject3": 97.0,
+		"scoreSubject4": 91.5,
+		"scoreSubject5": 77.0,
+		"phonenumber": "12321324"
+	},
+	{
+		"firstname": "Abhishek",
+		"lastname": "Nair",
+		"address": "Eglinton, Toronto, ON",
+		"scoreSubject1": 87.5,
+		"scoreSubject2": 64.5,
+		"scoreSubject3": 97.0,
+		"scoreSubject4": 45.5,
+		"scoreSubject5": 70.0,
+		"phonenumber": "4599455"
+	},
+	{
+		"firstname": "Sanjay",
+		"lastname": "Raj",
+		"address": "York, Toronto, ON",
+		"scoreSubject1": 94.5,
+		"scoreSubject2": 55.5,
+		"scoreSubject3": 97.0,
+		"scoreSubject4": 81.5,
+		"scoreSubject5": 97.0,
+		"phonenumber": "3434534"
+	},
+	{
+		"firstname": "Suchitra",
+		"lastname": "Rajurao",
+		"address": "St.Clair, Toronto, ON",
+		"scoreSubject1": 93.5,
+		"scoreSubject2": 67.5,
+		"scoreSubject3": 90.0,
+		"scoreSubject4": 91.5,
+		"scoreSubject5": 73.0,
+		"phonenumber": "6959455"
+	},
+	{
+		"firstname": "Kevin",
+		"lastname": "Paul",
+		"address": "Union, Toronto, ON",
+		"scoreSubject1": 66.5,
+		"scoreSubject2": 67.5,
+		"scoreSubject3": 88.0,
+		"scoreSubject4": 91.5,
+		"scoreSubject5": 55.0,
+		"phonenumber": "5993953"
+	},
+	{
+		"firstname": "Jith",
+		"lastname": "Koshy",
+		"address": "Finch, Toronto, ON",
+		"scoreSubject1": 88.0,
+		"scoreSubject2": 68.5,
+		"scoreSubject3": 97.0,
+		"scoreSubject4": 95.5,
+		"scoreSubject5": 99.0,
+		"phonenumber": "5739594"
+	}
+]

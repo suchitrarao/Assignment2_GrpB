@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Hello World!</h2>
-	<form action='TestServlet1'>
-		<input type='submit' value='Click here'>
+	<h2>JAVA ASSIGNMENT 2</h2>
+	<form action='StudentServlet'>
+		<input type='submit' value='Show Student Data'>
+	</form>
+	<form action='CalculateAreaServlet'>
+		<input type='submit' value='Show Area Data'>
 	</form>
 
 </body>
