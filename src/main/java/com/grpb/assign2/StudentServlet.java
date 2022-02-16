@@ -71,54 +71,63 @@ public class StudentServlet extends HttpServlet {
 			JSONArray subject5List = null;
 			JSONArray phonenumberList = null;
 
+			// Converting JSONArray to String[]
 			firstnameList = (JSONArray) studentDetails.get("firstname");
 			firstname = new String[5];
 			for (int i = 0; i < firstname.length; i++) {
 				firstname[i] = (String) firstnameList.get(i);
 			}
 
+			// Converting JSONArray to String[]
 			lastnameList = (JSONArray) studentDetails.get("lastname");
 			lastname = new String[5];
 			for (int i = 0; i < lastname.length; i++) {
 				lastname[i] = (String) lastnameList.get(i);
 			}
 
+			// Converting JSONArray to String[]
 			addressList = (JSONArray) studentDetails.get("address");
 			address = new String[5];
 			for (int i = 0; i < address.length; i++) {
 				address[i] = (String) addressList.get(i);
 			}
 
+			// Converting JSONArray to String[]
 			subject1List = (JSONArray) studentDetails.get("scoreSubject1");
 			subject1 = new String[5];
 			for (int i = 0; i < subject1.length; i++) {
 				subject1[i] = String.valueOf(subject1List.get(i));
 			}
 
+			// Converting JSONArray to String[]
 			subject2List = (JSONArray) studentDetails.get("scoreSubject2");
 			subject2 = new String[5];
 			for (int i = 0; i < subject2.length; i++) {
 				subject2[i] = String.valueOf(subject2List.get(i));
 			}
 
+			// Converting JSONArray to String[]
 			subject3List = (JSONArray) studentDetails.get("scoreSubject3");
 			subject3 = new String[5];
 			for (int i = 0; i < subject3.length; i++) {
 				subject3[i] = String.valueOf(subject3List.get(i));
 			}
 
+			// Converting JSONArray to String[]
 			subject4List = (JSONArray) studentDetails.get("scoreSubject4");
 			subject4 = new String[5];
 			for (int i = 0; i < subject4.length; i++) {
 				subject4[i] = String.valueOf(subject4List.get(i));
 			}
 
+			// Converting JSONArray to String[]
 			subject5List = (JSONArray) studentDetails.get("scoreSubject5");
 			subject5 = new String[5];
 			for (int i = 0; i < subject5.length; i++) {
 				subject5[i] = String.valueOf(subject5List.get(i));
 			}
 
+			// Converting JSONArray to String[]
 			phonenumberList = (JSONArray) studentDetails.get("phonenumber");
 			phonenumber = new String[5];
 			for (int i = 0; i < phonenumber.length; i++) {

@@ -25,17 +25,28 @@
 		<tbody>
 			<%
 			session = request.getSession(false);
-			List<String[]> studentData = (List<String[]>) session.getAttribute("student-data");
-			for (int i = 0; i < studentData.size(); i++) {
+			String[] firstnameList = (String[]) session.getAttribute("firstname");
+			String[] lastnameList = (String[]) session.getAttribute("lastname");
+			String[] addressList = (String[]) session.getAttribute("address");
+			String[] subject1List = (String[]) session.getAttribute("subject1");
+			String[] subject2List = (String[]) session.getAttribute("subject2");
+			String[] subject3List = (String[]) session.getAttribute("subject3");
+			String[] subject4List = (String[]) session.getAttribute("subject4");
+			String[] subject5List = (String[]) session.getAttribute("subject5");
+			String[] phonenumber = (String[]) session.getAttribute("phonenumber");
+
+			for (int i = 0; i < firstnameList.length; i++) {
 			%>
 			<tr>
-				<%
-				for (int j = 0; j < studentData.get(i).length; j++) {
-				%>
-				<td><%=studentData.get(i)[j]%></td>
-				<%
-				}
-				%>
+				<td><%=firstnameList[i]%></td>
+				<td><%=lastnameList[i]%></td>
+				<td><%=addressList[i]%></td>
+				<td><%=subject1List[i]%></td>
+				<td><%=subject2List[i]%></td>
+				<td><%=subject3List[i]%></td>
+				<td><%=subject4List[i]%></td>
+				<td><%=subject5List[i]%></td>
+				<td><%=phonenumber[i]%></td>
 			</tr>
 			<%
 			}

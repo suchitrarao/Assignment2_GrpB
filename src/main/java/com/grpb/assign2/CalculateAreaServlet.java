@@ -17,7 +17,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 /*	Date -02/12/2022
-	Author - 
+	Author - Sanjay / Kevin
 	Description - This servlet reads height, base of triangle and side of square from JSON and 
 					calculate area for both, pass as session attribute to area JSP
 */
