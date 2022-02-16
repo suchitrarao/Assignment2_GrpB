@@ -43,38 +43,105 @@ public class StudentServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 		// Create JSON Parser and Read Data from JSON file (student.json)
 		JSONParser parser = new JSONParser();
 		FileReader reader = new FileReader(this.getServletContext().getRealPath("/") + "JsonFiles/student.json");
-		List<String[]> studentData = new ArrayList<String[]>();
+
+		String[] firstname = null;
+		String[] lastname = null;
+		String[] address = null;
+		String[] subject1 = null;
+		String[] subject2 = null;
+		String[] subject3 = null;
+		String[] subject4 = null;
+		String[] subject5 = null;
+		String[] phonenumber = null;
+
 		try {
 			Object obj = parser.parse(reader);
-			JSONArray studentArray = (JSONArray) obj;
+			JSONObject studentDetails = (JSONObject) obj;
+			JSONArray firstnameList = null;
+			JSONArray lastnameList = null;
+			JSONArray addressList = null;
+			JSONArray subject1List = null;
+			JSONArray subject2List = null;
+			JSONArray subject3List = null;
+			JSONArray subject4List = null;
+			JSONArray subject5List = null;
+			JSONArray phonenumberList = null;
 
-			// Iterate through the student informations and add to String Array
-			for (Object o : studentArray) {
-				JSONObject student = (JSONObject) o;
-				String[] stud = new String[9];
-				stud[0] = (String) student.get("firstname");
-				stud[1] = (String) student.get("lastname");
-				stud[2] = (String) student.get("address");
-				stud[3] = String.valueOf(student.get("scoreSubject1"));
-				stud[4] = String.valueOf(student.get("scoreSubject2"));
-				stud[5] = String.valueOf(student.get("scoreSubject3"));
-				stud[6] = String.valueOf(student.get("scoreSubject4"));
-				stud[7] = String.valueOf(student.get("scoreSubject5"));
-				stud[8] = (String) student.get("phonenumber");
-				studentData.add(stud);
+			firstnameList = (JSONArray) studentDetails.get("firstname");
+			firstname = new String[5];
+			for (int i = 0; i < firstname.length; i++) {
+				firstname[i] = (String) firstnameList.get(i);
 			}
+
+			lastnameList = (JSONArray) studentDetails.get("lastname");
+			lastname = new String[5];
+			for (int i = 0; i < lastname.length; i++) {
+				lastname[i] = (String) lastnameList.get(i);
+			}
+
+			addressList = (JSONArray) studentDetails.get("address");
+			address = new String[5];
+			for (int i = 0; i < address.length; i++) {
+				address[i] = (String) addressList.get(i);
+			}
+
+			subject1List = (JSONArray) studentDetails.get("scoreSubject1");
+			subject1 = new String[5];
+			for (int i = 0; i < subject1.length; i++) {
+				subject1[i] = String.valueOf(subject1List.get(i));
+			}
+
+			subject2List = (JSONArray) studentDetails.get("scoreSubject2");
+			subject2 = new String[5];
+			for (int i = 0; i < subject2.length; i++) {
+				subject2[i] = String.valueOf(subject2List.get(i));
+			}
+
+			subject3List = (JSONArray) studentDetails.get("scoreSubject3");
+			subject3 = new String[5];
+			for (int i = 0; i < subject3.length; i++) {
+				subject3[i] = String.valueOf(subject3List.get(i));
+			}
+
+			subject4List = (JSONArray) studentDetails.get("scoreSubject4");
+			subject4 = new String[5];
+			for (int i = 0; i < subject4.length; i++) {
+				subject4[i] = String.valueOf(subject4List.get(i));
+			}
+
+			subject5List = (JSONArray) studentDetails.get("scoreSubject5");
+			subject5 = new String[5];
+			for (int i = 0; i < subject5.length; i++) {
+				subject5[i] = String.valueOf(subject5List.get(i));
+			}
+
+			phonenumberList = (JSONArray) studentDetails.get("phonenumber");
+			phonenumber = new String[5];
+			for (int i = 0; i < phonenumber.length; i++) {
+				phonenumber[i] = (String) phonenumberList.get(i);
+			}
+
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
-		// Create Http session and add student data as a session attribute and redirect to student jsp
+		// Create Http session and add student data as a session attribute and redirect
+		// to student jsp
 		HttpSession session = request.getSession(false);
-		session.setAttribute("student-data", studentData);
+		session.setAttribute("firstname", firstname);
+		session.setAttribute("lastname", lastname);
+		session.setAttribute("address", address);
+		session.setAttribute("subject1", subject1);
+		session.setAttribute("subject2", subject2);
+		session.setAttribute("subject3", subject3);
+		session.setAttribute("subject4", subject4);
+		session.setAttribute("subject5", subject5);
+		session.setAttribute("phonenumber", phonenumber);
 		response.sendRedirect("students.jsp");
 	}
 
